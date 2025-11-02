@@ -6,10 +6,10 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Guilherme Augusto Martins de Carvalho
+- Matricula: 903025
+- Proposta de projeto escolhida: Temas e Conteúdos Associados (Entidade Principal (Tema): Futebol | Entidade Secundária (Conteúdos/Recursos): Notícias, jogos, tabela de classificação transferências, etc.)
+- Breve descrição sobre seu projeto: Portal de notícias e informações sobre futebol brasileiro e mundial (Futebol News)
 
 **Print dos testes da API com Postman ou similar**
 
