@@ -49,8 +49,10 @@ header {
   font-size: 90%;
 }
 
-.caixa-menuprincipal ul li a:hover {
+.caixa-menuprincipal ul li a:hover,
+.caixa-menuprincipal ul li a.active {
   text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Rodapé */
@@ -352,7 +354,6 @@ footer {
   margin-bottom: 0;
 }
 
-
 .detalhes-noticia .info-box-simples li:last-child {
   margin-bottom: 0;
   border-bottom: none;
@@ -493,7 +494,6 @@ footer .info-item .small {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 #galeriaContainer .card-img-top {
   width: 100%;
   height: 100%;
@@ -510,4 +510,229 @@ footer .info-item .small {
   #galeriaContainer .card-img-top {
     height: 150px;
   }
+}
+
+/* Estilos específicos para a página de cadastro */
+.form-label.fw-bold {
+  color: #006400;
+  font-size: 1.1rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #006400;
+  box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25);
+}
+
+.btn-success {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.btn-success:hover {
+  background-color: #004d00;
+  border-color: #004d00;
+}
+
+/* Preview da notícia */
+#previewNoticia {
+  border: 2px dashed #006400;
+  background: linear-gradient(135deg, #f8fff8 0%, #e6ffe6 100%);
+  transition: all 0.3s ease;
+}
+
+#previewNoticia:hover {
+  border-color: #004d00;
+  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.1);
+}
+
+.preview-content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Galeria de imagens */
+.galeria-imagem:focus {
+  border-color: #006400;
+  box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25);
+}
+
+.remover-imagem:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Contador de caracteres */
+#contadorDescricao {
+  font-weight: bold;
+  color: #006400;
+}
+
+/* Switch personalizado */
+.form-check-input:checked {
+  background-color: #006400;
+  border-color: #006400;
+}
+
+/* Alertas personalizados */
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .preview-content img {
+    max-height: 150px !important;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.alert {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Loading state */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Botões de ação */
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Spinner */
+.spinner-border.text-success {
+  color: #006400 !important;
+}
+
+/* Estilos para a lista de notícias no cadastro */
+.noticia-item {
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.noticia-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left-color: #006400;
+}
+
+.btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Badges personalizadas */
+.badge.bg-light {
+    border: 1px solid #dee2e6;
+}
+
+/* Modal de exclusão */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #006400;
+}
+
+/* Filtros e busca */
+.input-group-sm .form-control {
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.input-group-sm .btn {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* Estados dos botões */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilos para upload de imagens */
+.image-preview-container {
+    text-align: center;
+    padding: 10px;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.image-preview-container img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.remove-image {
+    font-size: 0.8rem;
+}
+
+/* Estilos para inputs de arquivo personalizados */
+.form-control[type="file"] {
+    padding: 0.375rem 0.75rem;
+}
+
+.form-control[type="file"]::file-selector-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #006400;
+    background-color: #e6ffe6;
+    border: 1px solid #006400;
+    border-radius: 0.375rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.form-control[type="file"]::file-selector-button:hover {
+    background-color: #006400;
+    color: white;
+}
+
+/* Galeria de imagens */
+.galeria-item {
+    margin-bottom: 1rem;
+}
+
+/* Loading states */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Alertas personalizados */
+.alert {
+    border: none;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
 }
